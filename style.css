@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+}
+/* up-and-down animation */
+
+@keyframes up-and-down{
+    0% {
+            transform: translateY(0);
+        }
+    
+    100% {
+        transform: translateY(-20px);
+        }
+}
+/* header */
+
+header{
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+header .logo{
+    margin-top: 12px;
+}
+header ul{
+    font-size: 20px;
+    display: flex;
+    list-style: none;
+    padding: 20px;
+}
+header ul li{
+    margin-left: 40px;
+}
+
+.cool-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+}
+
+/* home */
+
+.home::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+}
+.home .home-container {
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 120px;
+}
+.home .home-container .text{
+    margin-left: -100px;
+}
+.home .home-container .text h1{
+    font-size: 50px;
+    color: rgb(81 81 81);
+}
+.home .home-container .text p{
+    font-size: 30px;
+    color: rgb(157, 154, 154);
+    margin: -20px 0 0 108px;
+}
+.home .image img{
+    position: relative;
+    width: 350px;
+    margin-left: -350px;
+    animation: up-and-down 2s linear infinite alternate;
+    
+}
+.fa-angle-double-down:before {
+    color: #673ab7;
+}
+
+.fa-angle-double-down{
+    margin: -50px 0 0 50%;
+}
+.fa-angle-double-down{
+    animation: up-and-down 1s linear infinite alternate;
+}
+
+/* skills */
+
+.skills-container{
+    height: 750px;
+    padding-top: 100px;
+}
+.skills-container h2{
+    text-transform: uppercase;
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 0 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+.skills-title h2:hover {
+    transition: 1s;
+    background-color: #2196f3;
+}
+.dot{
+    position: absolute;
+    margin: 24px 0 0 44%;
+    width: 5px;
+    border: 7px solid #2196f3;
+    border-radius: 50%;
+}
+.dot2{
+    position: absolute;
+    margin: 24px 0 0 55%;
+    width: 5px;
+    border: 7px solid #2196f3;
+    border-radius: 50%;
+}
+.skills-container .cards{
+    display: flex;
+    justify-content: space-around;
+}
+.skills-container .cards .box{
+    padding: 30px 25px 0 25px;
+    background-color: white;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+.skills-container .cards .box img:hover{
+    transition: .3s;
+    transform: rotate(5deg) scale(1.1);
+}
+.cards .box h3{
+    color: rgb(81 81 81);
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+}
+.java-image{
+    filter: blur(3px);
+}
+.skills-container .cards .box h4{
+    color: rgb(192, 192, 0);
+    font-size: 30px;
+    text-align: center;
+    margin-top: -25px;
+} 
+.java-image:hover{
+    filter: blur(0);
+}
+.spikes::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-size: 30px 30px;
+}
+
+/* projects */
+
+.projects-container{
+    height: 800px;
+    background-color: #ececec;
+    padding-top: 100px;
+}
+.projects-title h2 {
+    text-transform: uppercase;
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 0 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+.projects-title h2:hover{
+    transition: 1s;
+    background-color: #2196f3;
+}
+.dot-projects {
+    position: absolute;
+    margin: 24px 0 0 56.5%;
+    width: 5px;
+    border: 7px solid #2196f3;
+    border-radius: 50%;
+}
+.dot2-projects {
+    position: absolute;
+    margin: 24px 0 0 42.5%;
+    width: 5px;
+    border: 7px solid #2196f3;
+    border-radius: 50%;
+}
+
+.projects-box{
+    display: flex;
+    padding: 35px;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.project-card{
+    height: 425px;
+    background-color: white;
+    transition: .5s;
+}
+.project-card:hover{
+    transform: scale(110%);
+}
+.projects-container .projects-box .project-card .info{
+    padding: 20px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.projects-container .projects-box .project-card .info P {
+    color: #777;
+    margin-bottom: 20px;
+}
+.projects-container .projects-box .project-card .info a {
+    color: #2196f3;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 2px solid #2196f3;
+
+}
+.projects-container .projects-box .project-card .info a:visited{
+    color: red;
+}
+
+/* contact */
+
+.contact-container{
+    height: 850px;
+    padding-top: 100px;
+}
+
+.contact-title h2 {
+    text-transform: uppercase;
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 0 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+.contact-title h2:hover {
+    transition: 1s;
+    background-color: #2196f3;
+}
+.dot-contact {
+    position: absolute;
+    margin: 24px 0 0 56%;
+    width: 5px;
+    border: 7px solid #2196f3;
+    border-radius: 50%;
+}
+
+.dot2-contact {
+    position: absolute;
+    margin: 24px 0 0 43%;
+    width: 5px;
+    border: 7px solid #2196f3;
+    border-radius: 50%;
+}
+.contact-info{
+    display: flex;
+    justify-content: center;
+}
+.contact-p p{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    color: #2196f3;
+}
+.contact-info img{
+    margin-top: -20px;
+    animation: up-and-down 1s linear infinite alternate;
+}
+
+.icons {
+    text-align: center;
+    margin-left: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    transition: .4s;
+    transform: scale(250%);
+
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-youtube,
+.fa-instagram,
+.fa-linkedin {
+    background: transparent;
+    color: #2196f3;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 30px 25px 4px 25px;
+}
+
+footer{
+    font-family: 'Work Sans', sans-serif;
+    height: 70px;
+    background-color: #ececec;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+
+    /* header */
+    header{
+        height: 150px;
+    }
+    header ul{
+        position: absolute;
+        top: 8%;
+        margin-left: -40px;
+    }
+
+    /* home */
+    .home .home-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .home .home-container .text{
+        margin-left: -385px;
+    }
+    .home .home-container .text h1{
+        font-size: 35px;
+        text-align: center;
+        width: 100%;
+        margin-left: 190px;
+        margin-top: -250px;
+    }
+    .home .home-container .text p{
+        width: 100%;
+        font-size: 20px;
+        margin-left: 370px;
+    }
+    .home .image img{
+        width: 250px;
+        margin-left: -210px;
+        margin-top: 100px;
+    }
+    .home::before{
+        height: 90%;
+        top: -10px;
+    }
+
+    .fa-angle-double-down{
+        margin: -200px 0 0 50%;
+        position: absolute;
+    }
+
+    /* skills */
+    .skills-container{
+        height: 1490px;
+    }
+    .skills-container .dot{
+        margin: 25px 0 0 95px;
+    }
+    .skills-container .dot2{
+        margin: 25px 0 0 275px;
+    }
+    .skills-container .cards{
+        flex-wrap: wrap;
+    }
+    .skills-container .cards .box{
+        margin-bottom: 30px;
+    }
+
+    /* projects */
+    .projects-container{
+        height: 2200px;
+    }
+    .projects-box{
+        flex-wrap: wrap;
+    }
+    .project-card{
+        margin-bottom: 30px;
+    }
+    .projects-container .dot-projects{
+        margin: 25px 0 0 80px ;
+    }
+    .projects-container .dot2-projects{
+        margin: 25px 0 0 295px;
+    }
+
+    /* contact */
+    .contact-container .dot-contact{
+        margin: 25px 0 0 85px;
+    }
+    .contact-container .dot2-contact{
+        margin: 25px 0 0 290px;
+    }
+    .contact-container .contact-info img{
+        width:  450px;
+    }
+    .contact-container .contact-p p{
+        font-size: 20px;
+    }
+}
